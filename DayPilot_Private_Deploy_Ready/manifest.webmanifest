@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "DayPilot 4 \u2014 Obsidian Personal HQ",
+  "short_name": "DayPilot",
+  "description": "Personal organizer with classes, barber earnings, gym, skincare, AI and a manual investing journal.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#090b10",
+  "theme_color": "#0c0d14",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

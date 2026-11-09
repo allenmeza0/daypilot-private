@@ -1,0 +1,17 @@
+{
+  "name": "daypilot-personal-hq",
+  "version": "4.0.0",
+  "private": true,
+  "description": "Private installable personal planner, barber, skincare and manual investing portfolio journal",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js"
+  },
+  "dependencies": {
+    "web-push": "^3.6.7"
+  }
+}
