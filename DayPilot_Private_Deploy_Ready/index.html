@@ -45,6 +45,7 @@ body{background:radial-gradient(circle at 88% -10%,#233052 0,transparent 32%),va
 <div id="modalWrap" class="modalwrap" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalhead"><h2 id="modalTitle">Add item</h2><button class="tiny" aria-label="Close" onclick="closeModal()">✕</button></div><div id="modalBody"></div></div></div>
 <div id="toast" class="toast" role="status"></div>
 <script src="./config.js"></script>
+<script src="./markets.js"></script>
 <script>
 'use strict';
 const KEY='daypilot_v1_data';
@@ -223,6 +224,5 @@ function checkReminders(){if(!('Notification'in window)||Notification.permission
 
 document.getElementById('modalWrap').addEventListener('click',e=>{if(e.target.id==='modalWrap')closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});load();render();initializeV2();
 </script>
-<script src="./markets.js"></script>
 </body>
 </html>
