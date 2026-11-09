@@ -1,0 +1,15 @@
+{
+  "name": "daypilot-personal-hq",
+  "version": "4.1.0",
+  "private": true,
+  "description": "No-login DayPilot: device-local planner and investment journal",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,7 @@
+const NAME='daypilot-shell-v4-nologin1';
+const CORE=['/','/index.html','/manifest.webmanifest','/icon-192.png','/icon-512.png','/icon.svg','/theme-luxe.css','/markets.css','/markets.js'];
+self.addEventListener('install',e=>{e.waitUntil(caches.open(NAME).then(c=>c.addAll(CORE)));self.skipWaiting()});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==NAME).map(k=>caches.delete(k)))));self.clients.claim()});
+self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin)return;if(new URL(e.request.url).pathname.startsWith('/api/')||new URL(e.request.url).pathname==='/config.js')return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){let c=r.clone();caches.open(NAME).then(cache=>cache.put(e.request,c))}return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match('/index.html'))))});
+self.addEventListener('push',e=>{let d={};try{d=e.data?.json()||{}}catch{}e.waitUntil(self.registration.showNotification(d.title||'DayPilot reminder',{body:d.body||'You have a scheduled reminder.',icon:'/icon-192.png',badge:'/icon-192.png',tag:d.tag||undefined,data:{url:d.url||'/'}}))});
+self.addEventListener('notificationclick',e=>{e.notification.close();e.waitUntil(self.clients.matchAll({type:'window',includeUncontrolled:true}).then(async cs=>{let c=cs[0];if(c){await c.focus();return}await self.clients.openWindow(e.notification.data?.url||'/')}))});
