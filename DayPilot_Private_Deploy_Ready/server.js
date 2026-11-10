@@ -17,7 +17,7 @@ const WINDOW_MS = 15 * 60 * 1000;
 const MAX_FAILURES = 8;
 const sessions = new Map();
 const failures = [];
-const files = new Set(['/','/index.html','/manifest.webmanifest','/sw.js','/icon.svg','/icon-192.png','/icon-512.png','/theme-luxe.css','/markets.css','/markets.js']);
+const files = new Set(['/','/index.html','/manifest.webmanifest','/sw.js','/icon.svg','/icon-192.png','/icon-512.png','/theme-luxe.css','/markets.css','/markets.js','/local-ai.js']);
 const publicAssets = new Set(['/sw.js','/manifest.webmanifest','/icon.svg','/icon-192.png','/icon-512.png']);
 const types = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.svg':'image/svg+xml','.webmanifest':'application/manifest+json; charset=utf-8'};
 const safeHeaders = {'Cache-Control':'no-store, max-age=0','Pragma':'no-cache','X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer'};

@@ -1,5 +1,5 @@
 // DayPilot access-code edition: never cache protected pages, files or user content.
-const NAME='daypilot-shell-v4-pin1';
+const NAME='daypilot-shell-v4-localai';
 self.addEventListener('install',()=>self.skipWaiting());
 self.addEventListener('activate',e=>{e.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith('daypilot-')).map(k=>caches.delete(k)));await self.clients.claim()})())});
 // All requests go to the server, so the access-code gate cannot be bypassed by this SW.
