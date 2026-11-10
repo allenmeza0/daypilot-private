@@ -1,4 +1,4 @@
-const NAME='daypilot-shell-v4-markets';
+const NAME='daypilot-shell-v4-nologin1';
 const CORE=['/','/index.html','/manifest.webmanifest','/icon-192.png','/icon-512.png','/icon.svg','/theme-luxe.css','/markets.css','/markets.js'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(NAME).then(c=>c.addAll(CORE)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==NAME).map(k=>caches.delete(k)))));self.clients.claim()});
