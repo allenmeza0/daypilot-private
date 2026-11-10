@@ -1,8 +1,8 @@
 {
   "name": "daypilot-personal-hq",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "private": true,
-  "description": "No-login DayPilot: device-local planner and investment journal",
+  "description": "DayPilot with server-side access-code lock and browser-local personal data",
   "engines": {
     "node": ">=20"
   },
